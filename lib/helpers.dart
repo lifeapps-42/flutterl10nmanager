@@ -24,7 +24,11 @@ class Logger {
 }
 
 /// Takes an absolute path and finds the file name
-String getFileNameFromPath(String path) => path.split('/').last;
+String getFileNameFromPath(String path) {
+  // if windows, use \ as the separator
+  if (path.contains('\\')) return path.split('\\').last;
+  return path.split('/').last;
+}
 
 /// Takes a file name and extracts the language code
 /// from it. Expects file to be named intl_en.arb

@@ -23,7 +23,7 @@ class CreateCommand extends Command {
 
   void run() async {
     // Validate the path
-    final String csvPath = argResults.rest[0];
+    final String csvPath = argResults!.rest[0];
     if (FileSystemEntity.typeSync(csvPath) == FileSystemEntityType.notFound) {
       _log.error('Path not found.');
       return;
@@ -80,9 +80,11 @@ class CreateCommand extends Command {
 
     for (String lang in languages) {
       String fileName = 'intl_$lang.arb';
-      String outputPath = argResults['output-path'].endsWith('/')
-          ? argResults['output-path']
-          : argResults['output-path'] + '/';
+      String outputPath = argResults?['output-path'];
+      // if output path doesn't end with a slash, add one
+      if (!outputPath.endsWith('/')) {
+        outputPath += '/';
+      }
       JsonEncoder encoder = JsonEncoder.withIndent('  ');
       await File(outputPath + fileName)
           .writeAsString(encoder.convert(manager.generateArb(lang)));

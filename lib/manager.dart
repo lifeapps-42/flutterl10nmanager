@@ -5,7 +5,7 @@ import 'package:flutterl10nmanager/entities/localisation.dart';
 import 'package:flutterl10nmanager/helpers.dart';
 
 class LocalisationsManager {
-  static final String messageFileName = 'intl_messages.arb';
+  static final String messageFileName = 'app_en.arb'; //'intl_messages.arb';
   final Map<String, Localisation> localisations = {};
   final _log = Logger();
 
@@ -23,7 +23,7 @@ class LocalisationsManager {
           "Warning! Missing localisation for ${localisationId}. Value not added.");
       return;
     }
-    localisations[localisationId].setLanguageValue(lang, value);
+    localisations[localisationId]?.setLanguageValue(lang, value);
   }
 
   /// Returns the current contents of the manager in CSV format
@@ -42,8 +42,10 @@ class LocalisationsManager {
         localisation.type,
         jsonEncode(localisation.placeholders)
       ];
-      languages
-          .forEach((lang) => row.add(localisation.valueForLang(lang) ?? ''));
+      // Add the values for each language
+      languages.forEach((lang) {
+        row.add(localisation.valueForLang(lang) ?? '');
+      });
       rows.add(row);
     });
 
@@ -56,7 +58,7 @@ class LocalisationsManager {
       '@@last_modified': DateFormat('y-MM-ddTHH:mm:ss.S').format(DateTime.now())
     };
     localisations.forEach((localisationId, localisation) {
-      String langValue = localisation.valueForLang(lang);
+      var langValue = localisation.valueForLang(lang);
       if (langValue != null) {
         arb[localisation.id] = langValue;
         arb['@' + localisation.id] = {

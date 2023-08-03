@@ -23,9 +23,14 @@ class ExportCommand extends Command {
   }
 
   void run() async {
-    final String l10nPath = argResults.rest[0].endsWith('/')
-        ? argResults.rest[0]
-        : argResults.rest[0] + '/';
+    final l10nPath = argResults!.rest[0].endsWith('/') || argResults!.rest[0].endsWith('\\')
+        ? argResults?.rest[0]
+        : argResults!.rest[0] + '/';
+    // Validate the path
+    if(l10nPath == null) {
+      _log.error('No path provided.');
+      return;
+    }
     if (FileSystemEntity.typeSync(
             l10nPath + LocalisationsManager.messageFileName) ==
         FileSystemEntityType.notFound) {
@@ -51,6 +56,14 @@ class ExportCommand extends Command {
             placeholders: jsonData[e]['placeholders'],
           ));
         }
+        else {
+          manager.addLocalisation(Localisation(
+              id: e,
+              description: "",
+              type: "",
+              placeholders: null)
+          );
+        }
       });
     });
 
@@ -58,15 +71,18 @@ class ExportCommand extends Command {
     Directory dir = Directory(l10nPath);
     Map<String, String> localisationFiles = {};
     dir.listSync().forEach((f) {
-      final String fileName = getFileNameFromPath(f.path);
-      RegExp pattern = RegExp(r'intl_([a-z]{0,3})\.arb');
+      final fileName = getFileNameFromPath(f.path);
+      var pattern = RegExp(r'app_([a-z]{0,3})\.arb');
       if (pattern.hasMatch(fileName)) {
-        localisationFiles[pattern.firstMatch(fileName).group(1)] = fileName;
+        if(pattern.firstMatch(fileName)?.group(1) != null) {
+          final match = pattern.firstMatch(fileName)!;
+          localisationFiles[match.group(1)!] = fileName;
+        }
       }
     });
 
     for (String lang in localisationFiles.keys) {
-      await File(l10nPath + localisationFiles[lang])
+      await File(l10nPath + localisationFiles[lang]!)
           .readAsString()
           .then((fileContents) => jsonDecode(fileContents))
           .then((jsonData) {
@@ -79,7 +95,7 @@ class ExportCommand extends Command {
       });
     }
 
-    String exportName = argResults['output-path'];
+    String exportName = argResults?['output-path'];
     await File(exportName).writeAsString(manager.getAsCSV());
     _log.success("Successfully exported data to CSV: ${exportName}");
   }

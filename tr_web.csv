@@ -1,0 +1,412 @@
+id|description|type|placeholders|ca|de|en|es|fr
+chat|||null|Xat|Chat|Chat|Chat|Chat
+tasks|||null|Tasques||My tasks|Tareas|
+calendar|||null|Calendari||Calendar|Calendario|
+account|||null|Compte||Account|Cuenta|
+my_patients|||null|Els meus pacients||My patients|Mis pacientes|
+my_treatments|||null|||My treatments||
+activity|||null|||Activity||
+add_activity|||null|||Add activity||
+add_treatment|||null|||Add treatment||
+name|||null|||Name||
+last_name_1|||null|||Last name 1||
+last_name_2|||null|||Last name 2||
+last_name|||null|||Last name||
+birth_date|||null|||Birth date||
+externalId|||null|||External ID||
+cancel|||null|||Cancel||
+continue_button|||null|||Continue||
+save|||null|||Save||
+introduce_search_terms|||null|||Introduce search terms to find the patient.||
+not_found_patient|||null|||Did not found your patient?||
+add_patient|||null|||Add patient||
+too_many_patients|||null|||Too many results. Please add more search criteria to refine your results.||
+email|||null|||Email||
+start_date|||null|||Start date||
+phone|||null|||Phone||
+no_data|||null|||No data||
+monitoring|||null|||Monitoring||
+date|||null|||Date||
+data_source|||null|||Data source||
+goal|||null|||Goal||
+language|||null|||Language||
+treatment|||null|||Treatment||
+case_manager|||null|||Case manager||
+field_required|||null|||This field is required||
+email_error|||null|||You have to write a valid email||
+patient_info_saved|||null|||The patient's information has been saved successfully||
+health_professionals|||null|||Health professionals||
+patient|||null|||Patient||
+adherence|||null|||Adherence||
+admission_date|||null|||Admission date||
+status|||null|||Status||
+role|||null|||Role||
+chats|||null|||Chats||
+actions|||null|||Actions||
+of_|||null|||of||
+done|||null|||Done||
+professional_management|||null|||Professional Management||
+add_professional|||null|||Add health professional||
+user_status|||null|||User status||
+physiotherapy|||null|||Physiotherapy||
+nutrition|||null|||Nutrition||
+psychology|||null|||Psychology||
+specialty|||null|||Specialty||
+anesthesia|||null|||Anesthesia||
+case_manager_or_specialty_required|||null|||Case manager or specialties required||
+specialist_required|||null|||Specialist required||
+select_protocol|||null|||Please select a protocol||
+active|||null|||Active||
+inactive|||null|||Inactive||
+protocol|||null|||Protocol||
+state|||null|||State||
+cancelled|||null|||Cancelled||
+finished|||null|||Finished||
+admin|||null|||Admin||
+specialist|||null|||Specialist||
+delete_health_professional|||null|||Delete health professional||
+delete_health_professional_message|||null|||Are you sure you want to delete this professional?||
+professional_deleted|||null|||Health professional deleted||
+confirm|||null|||Confirm||
+edit_patient|||null|||Edit patient||
+edit_professional|||null|||Edit health professional||
+delete_health_professional_error|||null|||This professional is assigned to a treatment in progress, it cannot be deleted||
+activate|||null|||Activate||
+enable|||null|||Enable||
+disable|||null|||Disable||
+resend_invitation|||null|||Resend invitation||
+activation_in_progress|||null|||Activation in progress||
+invitation_link_expired|||null|||Invitation link expired||
+mobile_access_disabled|||null|||Mobile access disabled||
+mobile_access_enabled|||null|||Mobile access enabled||
+access_disabled|||null|||Access disabled||
+access_enabled|||null|||Access enabled||
+invitation_link_sent_on|||null|||Invitation link sent on||
+at|||null|||at||
+notes|||null|||Notes||
+patient_task|||null|||Patient task||
+appointment|||null|||Appointment||
+participants|||null|||Participants||
+cancel_appointment|||null|||Cancel appointment||
+start_appointment|||null|||Start appointment||
+select_treatment|||null|||Select a protocol||
+task_started|||null|||Task started||
+treatment_created|||null|||The treatment has been created successfully||
+activation_sent|||null|||Activation sent||
+disabled|||null|||Disabled||
+monitoring_configuration|||null|||Monitoring configuration||
+mobile_access_configuration|||null|||Mobile access configuration||
+mobile_access_configuration_message|||null|||"A verification message will be sent to the patient's email (%s) to activate the mobile access. 
+Are you sure you want to continue?"||
+monitoring_variables|||null|||Monitoring variables||
+start_appointment_sure|||null|||It's not yet time for the appointment. Are you sure you want to start the appointment?||
+paired_devices|||null|||Paired devices||
+no_device|||null|||No device||
+no_devices_configured|||null|||No devices configured||
+no_monitoring_variables|||null|||No monitoring variables||
+connected|||null|||Connected||
+not_connected|||null|||Not connected||
+device|||null|||Device||
+device_id|||null|||Device ID||
+last_synchronized|||null|||Last synchronized at||
+variable_type|||null|||Variable type||
+request_by|||null|||Request by||
+activities|||null|||activities||
+delete_treatment|||null|||Delete treatment||
+delete_treatment_message|||null|||Are you sure you want to delete this treatment?||
+treatment_deleted|||null|||Treatment deleted||
+sleep|||null|||Sleep||
+hr|||null|||HR||
+hrv|||null|||HRV||
+yes|||null|||Yes||
+no|||null|||No||
+steps|||null|||Steps||
+all|||null|||All||
+specialties|||null|||Specialties||
+not_assigned|||null|||Not assigned||
+not_yet_synchronized|||null|||Not yet synchronized||
+role_not_authorized|||null|||You are not authorized||
+monitoring_variables_saved|||null|||Monitoring variables saved successfully||
+professional_saved|||null|||The professional's information has been saved successfully||
+update_device_sure|||null|||Are you sure you want to change the device?||
+not_configured|||null|||Not configured||
+in_progress|||null|||In progress||
+pending|||null|||Pending||
+suspended|||null|||Suspended||
+not_staged|||null|||Not staged||
+face_to_face|||null|||Face to face||
+video_call|||null|||Video call||
+phone_call|||null|||Phone call||
+appointment_of|||null|||Appointment of||
+request_for|||null|||Request for||
+configure_activity|||null|||Configure activity||
+rescheduled|||null|||Rescheduled||
+rescheduled_to|||null|||Rescheduled to||
+expired|||null|||Expired||
+missed|||null|||Missed||
+completed|||null|||Completed||
+executed|||null|||Executed||
+scheduled|||null|||Scheduled||
+select_appointment_type|||null|||Select appointment type||
+required|||null|||Required||
+to|||null|||to||
+select|||null|||Select||
+select_participants|||null|||Select participants||
+participants_required|||null|||Participants are required||
+appointment_instructions|||null|||Appointment instructions||
+schedule_instructions|||null|||Schedule instructions||
+activity_saved|||null|||Activity saved successfully||
+start_activity|||null|||Start activity||
+apply_this_configuration|||null|||Do you want to apply this configuration and start this activity?||
+save_configuration_apply_later|||null|||Alternatively, you can save this configuration if you plan to review and apply it later.||
+yes_start_activity|||null|||Yes, start activity||
+no_just_save|||null|||No, just save||
+reschedule|||null|||Reschedule||
+end_appointment|||null|||End appointment||
+task_finished|||null|||Task finished||
+cancel_task|||null|||Cancel task||
+stay_here|||null|||Stay here||
+no_show|||null|||No show||
+every_time|||null|||every time||
+send|||null|||Send||
+other_reason|||null|||Other reason||
+cancel_reason|||null|||Cancel reason||
+task_cancelled|||null|||Task cancelled||
+select_professionals|||null|||Select professionals||
+select_specialties|||null|||Select specialties||
+why_cancel_task|||null|||Why do you want to cancel this appointment?||
+save_changes|||null|||Save changes||
+appointment_saved|||null|||Appointment saved successfully||
+date_time_error|||null|||Date must be in the future, and end time must be after start time||
+want_reschedule|||null|||Do you want to reschedule this appointment?||
+reschedule_task|||null|||Reschedule task||
+new_date|||null|||New date||
+task_rescheduled|||null|||Task rescheduled||
+mandatory|||null|||Mandatory||
+not_mandatory|||null|||Not mandatory||
+questionnaire|||null|||Questionnaire||
+delete_form|||null|||Are you sure you want to delete this form?||
+select_profile|||null|||Select profile||
+selected_library_items|||null|||Selected library items||
+content_delivery|||null|||Content delivery||
+delivered|||null|||Delivered||
+delivery_date|||null|||Delivery date||
+delivered_library_items|||null|||Delivered library items||
+partiallyRead|||null|||Partially read||
+notRead|||null|||Not read||
+custom|||null|||Custom||
+error_patients_form|||null|||All forms must be assigned to the patient||
+all_day|||null|||All day||
+for_|||null|||for||
+not_ready|||null|||Not ready||
+ready|||null|||Ready||
+skipped|||null|||Skipped||
+draft|||null|||Draft||
+upcoming|||null|||Upcoming||
+read|||null|||Read||
+not_read|||null|||Not read||
+partially_read|||null|||Partially read||
+jan|||null|||Jan||
+feb|||null|||Feb||
+mar|||null|||Mar||
+apr|||null|||Apr||
+may|||null|||May||
+jun|||null|||Jun||
+jul|||null|||Jul||
+aug|||null|||Aug||
+sep|||null|||Sep||
+oct|||null|||Oct||
+nov|||null|||Nov||
+dec|||null|||Dec||
+january|||null|||January||
+february|||null|||February||
+march|||null|||March||
+april|||null|||April||
+june|||null|||June||
+july|||null|||July||
+may_c|||null|||May||
+august|||null|||August||
+september|||null|||September||
+october|||null|||October||
+november|||null|||November||
+december|||null|||December||
+monday|||null|||Monday||
+tuesday|||null|||Tuesday||
+wednesday|||null|||Wednesday||
+thursday|||null|||Thursday||
+friday|||null|||Friday||
+saturday|||null|||Saturday||
+sunday|||null|||Sunday||
+first|||null|||first||
+second|||null|||second||
+third|||null|||third||
+fourth|||null|||fourth||
+fifth|||null|||fifth||
+days|||null|||Days||
+weeks|||null|||Weeks||
+months|||null|||Months||
+years|||null|||Years||
+repeats|||null|||Repeats||
+not_repeat|||null|||Does not repeat||
+finishes_on|||null|||Finishes on||
+finishes_after|||null|||Finishes after||
+every|||null|||every||
+occurrences|||null|||occurrences||
+on|||null|||on||
+select_days|||null|||Select days||
+every_month_on_the|||null|||Every month on the||
+last_day_month|||null|||Last day of the month||
+last|||null|||Last||
+of_the_month|||null|||of the month||
+some_months_dont|||null|||Some months don't have||
+those_will_be_last_day_month|||null|||days and those the date will be the last day of the month.||
+upcoming_desc|||null|||The form is not available until the form availability date is reached||
+ready_desc|||null|||The form is ready to fill out but has not been filled, and not started.||
+draft_desc|||null|||The form is being filled. Not used now.||
+finished_desc|||null|||The form has been fully filled out.||
+expired_desc|||null|||The form due date has been passed.||
+skipped_desc|||null|||The user has decided to not fill this form.||
+must_answer_question|||null|||You must answer the current question before continuing||
+form_saved|||null|||Form saved successfully||
+error_form_uhda|||null|||Error saving form in UHDA||
+error_loading_form|||null|||Error loading form||
+update_current_goal|||null|||Update current goal||
+task_updated|||null|||Task updated successfully||
+apply_change_from|||null|||Apply change from||
+change_goal_to|||null|||Change goal to||
+update_goal|||null|||Update goal||
+activity_goals_updated|||null|||Activity goals updated successfully||
+finish|||null|||Finish||
+steps_day|||null|||Steps/day||
+finish_appointment|||null|||Finish appointment||
+finish_reason|||null|||Finish appointment reason||
+patients_device|||null|||Patient's device||
+hospital_device|||null|||Hospital device||
+select_device|||null|||Select device||
+calories|||null|||Calories||
+distance|||null|||Distance||
+daily_steps|||null|||Daily steps||
+weekly_avg_steps|||null|||Weekly average steps||
+weight|||null|||Weight||
+following_questionnaires|||null|||The following questionnaires are not filled yet:||
+if_finish_appointment|||null|||If you finish the appointment, they will be marked as not filled. Do you want to continue?||
+care_plan|||null|||Care plan||
+no_messages|||null|||No messages||
+unread_messages|||null|||unread messages||
+unread_message|||null|||unread message||
+with_messages|||null|||With messages||
+chat_specialists|||null|||Chat for specialists||
+monitoring_activity_constants|||null|||Monitoring activity constants||
+changes_override|||null|||The following changes will be overridden||
+appointment_type|||null|||Appointment type||
+activity_no_configuration|||null|||This activity type does not need specific configuration.||
+report|||null|||Report||
+new_|||null|||New||
+error|||null|||Error||
+download_pdf|||null|||Download as PDF||
+generate_again|||null|||Generate again||
+report_generated_at|||null|||Report generated at||
+goals|||null|||Goals||
+report_generated|||null|||Report generated|Informe generado|
+report_generation_error|||null|||Error generating report. Please check that forms are filled correctly.|No se ha podido generar el informe. Por favor, revise que se han rellenado los formularios correctamente.|
+finish_report_task|||null|||Finish report task||
+e2002|||null|||TimeZone is not defined for the request.||
+e2003|||null|||Invalid UUID format. Please provide a valid UUID.||
+e2004|||null|||Please refine your input values. %s||
+e2012|||null|||Activity not found||
+e2011|||null|||Patient already has a treatment in progress. Patient is already in an ongoing treatment with same protocol.||
+e2010|||null|||Treatment not found, treatmentId: %s||
+e2013|||null|||Activity already configured, treatmentId: %s, activityId: %s||
+e2015|||null|||Task not found, taskId: %s||
+e2016|||null|||Task not found, taskId: %s||
+e2017|||null|||Task not found, taskId: %s||
+e2018|||null|||Task not found, taskId: %s||
+e2050|||null|||Forms defined in the Protocol not found: %s||
+e2051|||null|||Protocol defined Content Library not found: %s||
+e2101|||null|||Activity already configured, treatmentId: %s, activityId: %s||
+e2201|||null|||Error completing appointment task, taskId: %s||
+e2202|||null|||Appointment task already started, taskId: %s||
+e2203|||null|||Appointment task is not In progress, so can’t be finished, taskId: %s||
+e2204|||null|||Appointment task cannot be cancelled, taskId: %s||
+e2205|||null|||Appointment task cannot be updated, taskId: %s||
+e2206|||null|||Appointment task cannot be rescheduled, taskId: %s||
+e2207|||null|||Forms cannot be filled, because the appointment has ended.||
+e2208|||null|||Appointment task, form not found: %s||
+e2209|||null|||Appointment task cannot be finished by patient||
+e2210|||null|||Appointment task cannot be finished because still have mandatory forms to be filled out.||
+e2211|||null|||Appointment task is not in Scheduled state, so can’t be finished by the patient, taskId: %s||
+e2212|||null|||Appointment of type Patient Task is not allowed when having forms not assigned to Patient.||
+e2301|||null|||Form can not be filled, because is not available yet.||
+e2302|||null|||Form cannot be filled, because has been already filled.||
+e2303|||null|||Form cannot be filled, because has expired or has been skipped.||
+e2401|||null|||Monitoring activity config form adapter type not match, type: %s, treatmentId: %s, activityId: %s||
+e2402|||null|||Monitoring Task Definition not found.||
+e2403|||null|||Monitoring Task is expired.||
+e2404|||null|||Monitoring task manual input forbidden.||
+e2405|||null|||Monitoring Goals can no longer be updated.||
+e2501|||null|||Content Delivery Task Item not found: %s.||
+e2502|||null|||Content Delivery Task Item already read. Item id: %s.||
+e2503|||null|||Content Delivery Task not able to read, either has not been delivered yet or has already finished.||
+e2550|||null|||Content Library not found: %s.||
+e2551|||null|||Content Library Item not found: %s.||
+e3001|||null|||No search parameter has been entered for the patient. Please enter at least one character to perform the search.||
+e3002|||null|||You have exceeded the maximum number of results allowed to be returned for this search. Please refine your search for more accurate results. The maximum number of results allowed is %s.||
+e3003|||null|||Invalid UUID format. Please provide a valid UUID.||
+e3004|||null|||Invalid input format. Please refine your input values. %s||
+e3005|||null|||Patient with that information already exists in our records. Please check the entered details and try again||
+e3006|||null|||This email already registered as a user. Please check and retry.||
+e3007|||null|||Error creating User, Response Status: %s||
+e3008|||null|||Error activating user. Please check email.||
+e3010|||null|||Party not found, partyId: %s||
+e3014|||null|||Treatment service not found.||
+e3015|||null|||Health Professional has treatments assigned||
+e3016|||null|||Treatment service unavailable||
+e3017|||null|||Health professional with that information already exists in our records. Please check the entered details and try again||
+e3018|||null|||Party has treatments assigned||
+e3019|||null|||You don't have permission to access this resource||
+e3020|||null|||Party not found, authId: %s||
+e3100|||null|||More than one user with partyId: %s||
+e3101|||null|||The 'PATIENT' role cannot be assigned simultaneously with other roles in a party.||
+e3102|||null|||Invalid Role list format. Please provide a valid Role list.||
+e3103|||null|||Invalid Specialties list format. Please provide a valid Specialties list.||
+e3201|||null|||Party is already active||
+e3202|||null|||Party is already disabled||
+e4001|||null|||Treatment Monitoring Configuration not found||
+e4003|||null|||Invalid UUID format. Please provide a valid UUID.||
+e4004|||null|||Invalid input. Please refine your input values for this mutation.||
+e4010|||null|||Party not found||
+e4011|||null|||Party is not a Patient||
+e4012|||null|||The device was not registered.||
+e4401|||null|||The operation is not permitted.||
+i2039|||null|||Scheduler must be not null||
+i2040|||null|||Start time must be in the future||
+i2041|||null|||End datetime must be after start datetime||
+i2042|||null|||Not valid appointment type||
+i2043|||null|||Appointment must have at least one participant||
+i2044|||null|||Appointment of type Patient Task is not allowed when having forms not assigned to Patient.||
+i2045|||null|||Answer not available at providerForms||
+i2046|||null|||Appointment type must be not null||
+i2049|||null|||Recurrence ending type is required||
+i2053|||null|||If there are pending mandatory forms is needed to provide a finish appointment reason.||
+i2055|||null|||Monitoring start date is null.||
+i2056|||null|||Monitoring start date is in the past.||
+i2057|||null|||Monitoring end date is null.||
+i2058|||null|||Monitoring end date is in the past.||
+i2059|||null|||Monitoring end date is before monitoring start date.||
+i2060|||null|||Monitoring task definitions is null.||
+i2061|||null|||Monitoring daily steps goal is null.||
+i2062|||null|||Date for apply change from is null.||
+i2063|||null|||Date for apply change from must be before or today.||
+i2064|||null|||Content delivery not found.||
+i2065|||null|||Invalid number of items.||
+i2066|||null|||Invalid items.||
+i2067|||null|||Invalid profile id.||
+i2068|||null|||Missing library name.||
+i2069|||null|||Monitoring data source can't be null.||
+i4001|||null|||Device type null or not allowed.||
+i4002|||null|||Device Id cannot be null||
+i4003|||null|||Patient Id is null or invalid uuid||
+e1login|||null|||Login||
+e1dashboard|||null|||My treatments||
+e1notFound|||null|||Not Found||
+e1treatment|||null|||Treatment||
