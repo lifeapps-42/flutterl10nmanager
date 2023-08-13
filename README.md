@@ -9,13 +9,13 @@ Having lots of localisation files to manage can be quite tedious, especially for
 After cloning the package. Navigate to the package directory and create the executable.
 
 ```
-dart2aot bin/main.dart bin/main.dart.aot
+dart compile aot-snapshot bin\main.dart -o bin\main.aot
 ```
 
 Then activate the executable file globally
 
 ```
-pub global activate --source path path/to/flutterl10nmanager
+dart pub global activate --source path c:\Jordi\HealthCircuit\projects\flutterl10nmanager\
 ```
 
 ## Commands
@@ -35,4 +35,8 @@ The [create command](https://github.com/wamphlett/flutterl10nmanager/blob/master
 example usage:
 ```
 flutterl10nmanager create path/to/export.csv -o optional/output/dir
+```
+```
+flutterl10nmanager create "c:\Jordi\HealthCircuit\Translations\tr_web_utf8.csv" -o c:\Jordi\HealthCircuit\Translations\output\web
+flutterl10nmanager create "c:\Jordi\HealthCircuit\Translations\tr_mobile_utf8.csv" -o c:\Jordi\HealthCircuit\Translations\output\mobile
 ```

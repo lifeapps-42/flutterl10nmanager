@@ -61,11 +61,11 @@ class LocalisationsManager {
       var langValue = localisation.valueForLang(lang);
       if (langValue != null) {
         arb[localisation.id] = langValue;
-        arb['@' + localisation.id] = {
+        /*arb['@' + localisation.id] = {
           'description': localisation.description,
           'type': localisation.type,
           'placeholders': localisation.placeholders,
-        };
+        };*/
       }
     });
     return arb;

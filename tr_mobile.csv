@@ -99,6 +99,7 @@ expired|||null|||Expired||
 completed|||null|||Completed||
 executed|||null|||Executed||
 scheduled|||null|||Scheduled||
+pending|||null|||Pending||
 today|||null|||Today||
 coming_soon|||null|||Coming soon||
 bluetooth_error|||null|||Please, turn on the bluetooth||

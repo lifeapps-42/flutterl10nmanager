@@ -31,7 +31,7 @@ class CreateCommand extends Command {
 
     // Parse the CSV
     final List<List<dynamic>> rows = const CsvToListConverter()
-        .convert(await File(csvPath).readAsString(), fieldDelimiter: '|');
+        .convert(await File(csvPath).readAsString(), fieldDelimiter: '|', eol: '\r\n');
 
     // Validate the data structure
     List headers = rows.first;
@@ -79,7 +79,7 @@ class CreateCommand extends Command {
     });
 
     for (String lang in languages) {
-      String fileName = 'intl_$lang.arb';
+      String fileName = 'app_$lang.arb';
       String outputPath = argResults?['output-path'];
       // if output path doesn't end with a slash, add one
       if (!outputPath.endsWith('/')) {
