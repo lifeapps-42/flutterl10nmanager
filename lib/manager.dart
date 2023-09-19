@@ -4,6 +4,8 @@ import 'package:csv/csv.dart';
 import 'package:flutterl10nmanager/entities/localisation.dart';
 import 'package:flutterl10nmanager/helpers.dart';
 
+import 'constants/special_symbols.dart';
+
 class LocalisationsManager {
   static final String messageFileName = 'app_en.arb'; //'intl_messages.arb';
   final Map<String, Localisation> localisations = {};
@@ -49,7 +51,7 @@ class LocalisationsManager {
       rows.add(row);
     });
 
-    return ListToCsvConverter().convert(rows, fieldDelimiter: '|');
+    return ListToCsvConverter().convert(rows, fieldDelimiter: columnDelimeter);
   }
 
   /// Generates an arb object for the given [lang]
@@ -61,11 +63,18 @@ class LocalisationsManager {
       var langValue = localisation.valueForLang(lang);
       if (langValue != null) {
         arb[localisation.id] = langValue;
-        /*arb['@' + localisation.id] = {
-          'description': localisation.description,
-          'type': localisation.type,
-          'placeholders': localisation.placeholders,
-        };*/
+        if (lang == 'en' &&
+            (localisation.description.isNotEmpty ||
+                localisation.type.isNotEmpty ||
+                localisation.placeholders != null)) {
+          arb['@' + localisation.id] = {
+            if (localisation.description.isNotEmpty)
+              'description': localisation.description,
+            if (localisation.type.isNotEmpty) 'type': localisation.type,
+            if (localisation.placeholders != null)
+              'placeholders': localisation.placeholders,
+          };
+        }
       }
     });
     return arb;
@@ -89,8 +98,8 @@ class LocalisationsManager {
   /// Basic validation of arb resources
   static bool isValidResourceObject(dynamic resource) {
     return resource is Map &&
-        resource['description'] != null &&
-        resource['type'] != null &&
+        // resource['description'] != null &&
+        // resource['type'] != null &&
         resource['placeholders'] != null;
   }
 }

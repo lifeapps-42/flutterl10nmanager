@@ -2,9 +2,12 @@ import 'dart:io';
 import 'dart:convert';
 import 'package:args/command_runner.dart';
 import 'package:csv/csv.dart';
+import 'package:csv/csv_settings_autodetection.dart';
 import 'package:flutterl10nmanager/entities/localisation.dart';
 import 'package:flutterl10nmanager/manager.dart';
 import 'package:flutterl10nmanager/helpers.dart';
+
+import '../constants/special_symbols.dart';
 
 /// Takes a CSV and generates an arb file for every language in
 /// the CSV.
@@ -30,10 +33,14 @@ class CreateCommand extends Command {
     }
 
     // Parse the CSV
-    final List<List<dynamic>> rows = const CsvToListConverter()
-        .convert(await File(csvPath).readAsString(), fieldDelimiter: '|', eol: '\r\n');
+    final List<List<dynamic>> rows = const CsvToListConverter().convert(
+        await File(csvPath).readAsString(),
+        fieldDelimiter: columnDelimeter,
+        eol: '\r\n')
+      ..removeAt(0);
 
     // Validate the data structure
+
     List headers = rows.first;
     rows.removeAt(0);
     if (headers.length < 5 ||

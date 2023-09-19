@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:convert';
 import 'package:args/command_runner.dart';
+import 'package:flutterl10nmanager/constants/special_symbols.dart';
 import 'package:flutterl10nmanager/entities/localisation.dart';
 import 'package:flutterl10nmanager/manager.dart';
 import 'package:flutterl10nmanager/helpers.dart';
@@ -23,11 +24,12 @@ class ExportCommand extends Command {
   }
 
   void run() async {
-    final l10nPath = argResults!.rest[0].endsWith('/') || argResults!.rest[0].endsWith('\\')
-        ? argResults?.rest[0]
-        : argResults!.rest[0] + '/';
+    final l10nPath =
+        argResults!.rest[0].endsWith('/') || argResults!.rest[0].endsWith('\\')
+            ? argResults?.rest[0]
+            : argResults!.rest[0] + '/';
     // Validate the path
-    if(l10nPath == null) {
+    if (l10nPath == null) {
       _log.error('No path provided.');
       return;
     }
@@ -51,18 +53,13 @@ class ExportCommand extends Command {
             LocalisationsManager.isValidResourceObject(jsonData[e])) {
           manager.addLocalisation(Localisation(
             id: e.substring(1),
-            description: jsonData[e]['description'],
-            type: jsonData[e]['type'],
-            placeholders: jsonData[e]['placeholders'],
+            description: jsonData[e]['description'] ?? '',
+            type: jsonData[e]['type'] ?? '',
+            placeholders: jsonData[e]['placeholders'] ?? '',
           ));
-        }
-        else {
+        } else {
           manager.addLocalisation(Localisation(
-              id: e,
-              description: "",
-              type: "",
-              placeholders: null)
-          );
+              id: e, description: "", type: "", placeholders: null));
         }
       });
     });
@@ -74,7 +71,7 @@ class ExportCommand extends Command {
       final fileName = getFileNameFromPath(f.path);
       var pattern = RegExp(r'app_([a-z]{0,3})\.arb');
       if (pattern.hasMatch(fileName)) {
-        if(pattern.firstMatch(fileName)?.group(1) != null) {
+        if (pattern.firstMatch(fileName)?.group(1) != null) {
           final match = pattern.firstMatch(fileName)!;
           localisationFiles[match.group(1)!] = fileName;
         }
@@ -96,7 +93,12 @@ class ExportCommand extends Command {
     }
 
     String exportName = argResults?['output-path'];
-    await File(exportName).writeAsString(manager.getAsCSV());
+    _log.info('Export Started');
+    await File(exportName).writeAsString(
+      'sep=$columnDelimeter\r\n',
+    );
+    await File(exportName)
+        .writeAsString(manager.getAsCSV(), mode: FileMode.append);
     _log.success("Successfully exported data to CSV: ${exportName}");
   }
 }
